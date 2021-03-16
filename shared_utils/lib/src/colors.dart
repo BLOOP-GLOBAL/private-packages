@@ -12,7 +12,7 @@ const kDarkPrimaryColor = Color(0xffF4BB3E);
 // light
 const kLightBackgroundColor = Color(0xffF7F7F6);
 const kLightSurfaceColor = Color(0xffffffff);
-const kLightSecondaryColor = Color(0xff2D3AF3);
+const kLightSecondaryColor = Color(0xff009688);
 const kLightErrorColor = Color(0xffFF6A6A);
 const kLightDisabledColor = Color(0xffC8CBD9);
 
