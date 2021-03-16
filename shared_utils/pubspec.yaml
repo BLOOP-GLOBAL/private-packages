@@ -1,12 +1,12 @@
 name: shared_utils
 description: Shared utilities for personal Flutter projects
 version: 0.0.1
-author: "Quabynah Bilson <codelbas.quabynah@gmail.com>"
-homepage:
+author: Quabynah Bilson <codelbas.quabynah@gmail.com>
+homepage: https://github.com/Quabynah-Codelabs/private-packages/tree/main/shared_utils
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
-  flutter: ">=2.0.1"
+  flutter: ">=2.0.0"
 
 dependencies:
   flutter:
