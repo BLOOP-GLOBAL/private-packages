@@ -1,7 +1,6 @@
 name: shared_utils
 description: Shared utilities for personal Flutter projects
-version: 0.0.1
-author: Quabynah Bilson <codelbas.quabynah@gmail.com>
+version: 0.0.1-dev.1
 homepage: https://github.com/Quabynah-Codelabs/private-packages/tree/main/shared_utils
 
 environment:
