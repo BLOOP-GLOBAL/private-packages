@@ -129,168 +129,199 @@ extension IconX on Icon {
 ///
 /// converts a [String] to a [Text][Widget]
 extension TextX on String {
-  Text h4(
+  Widget h4(
     BuildContext context, {
     Color? color,
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      Text(
-        this,
-        textAlign: alignment,
-        style: Theme.of(context).textTheme.headline4?.copyWith(
-            color: color ??
-                Theme.of(context)
-                    .colorScheme
-                    .onBackground
-                    .withOpacity(emphasis)),
+      FittedBox(
+        fit: BoxFit.contain,
+        child: Text(
+          this,
+          textAlign: alignment,
+          style: Theme.of(context).textTheme.headline4?.copyWith(
+              color: color ??
+                  Theme.of(context)
+                      .colorScheme
+                      .onBackground
+                      .withOpacity(emphasis)),
+        ),
       );
 
-  Text h5(
+  Widget h5(
     BuildContext context, {
     Color? color,
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      Text(
-        this,
-        textAlign: alignment,
-        style: Theme.of(context).textTheme.headline5?.copyWith(
-            color: color ??
-                Theme.of(context)
-                    .colorScheme
-                    .onBackground
-                    .withOpacity(emphasis)),
+      FittedBox(
+        fit: BoxFit.contain,
+        child: Text(
+          this,
+          textAlign: alignment,
+          style: Theme.of(context).textTheme.headline5?.copyWith(
+              color: color ??
+                  Theme.of(context)
+                      .colorScheme
+                      .onBackground
+                      .withOpacity(emphasis)),
+        ),
       );
 
-  Text h6(
+  Widget h6(
     BuildContext context, {
     Color? color,
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      Text(
-        this,
-        textAlign: alignment,
-        style: Theme.of(context).textTheme.headline6?.copyWith(
-            color: color ??
-                Theme.of(context)
-                    .colorScheme
-                    .onBackground
-                    .withOpacity(emphasis)),
+      FittedBox(
+        fit: BoxFit.contain,
+        child: Text(
+          this,
+          textAlign: alignment,
+          style: Theme.of(context).textTheme.headline6?.copyWith(
+              color: color ??
+                  Theme.of(context)
+                      .colorScheme
+                      .onBackground
+                      .withOpacity(emphasis)),
+        ),
       );
 
-  Text bodyText1(
+  Widget bodyText1(
     BuildContext context, {
     Color? color,
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      Text(
-        this,
-        textAlign: alignment,
-        style: Theme.of(context).textTheme.bodyText1?.copyWith(
-            color: color ??
-                Theme.of(context)
-                    .colorScheme
-                    .onBackground
-                    .withOpacity(emphasis)),
+      FittedBox(
+        fit: BoxFit.contain,
+        child: Text(
+          this,
+          textAlign: alignment,
+          style: Theme.of(context).textTheme.bodyText1?.copyWith(
+              color: color ??
+                  Theme.of(context)
+                      .colorScheme
+                      .onBackground
+                      .withOpacity(emphasis)),
+        ),
       );
 
-  Text bodyText2(
+  Widget bodyText2(
     BuildContext context, {
     Color? color,
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      Text(
-        this,
-        textAlign: alignment,
-        style: Theme.of(context).textTheme.bodyText2?.copyWith(
-            color: color ??
-                Theme.of(context)
-                    .colorScheme
-                    .onBackground
-                    .withOpacity(emphasis)),
+      FittedBox(
+        fit: BoxFit.contain,
+        child: Text(
+          this,
+          textAlign: alignment,
+          style: Theme.of(context).textTheme.bodyText2?.copyWith(
+              color: color ??
+                  Theme.of(context)
+                      .colorScheme
+                      .onBackground
+                      .withOpacity(emphasis)),
+        ),
       );
 
-  Text subtitle1(
+  Widget subtitle1(
     BuildContext context, {
     Color? color,
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      Text(
-        this,
-        textAlign: alignment,
-        style: Theme.of(context).textTheme.subtitle1?.copyWith(
-            color: color ??
-                Theme.of(context)
-                    .colorScheme
-                    .onBackground
-                    .withOpacity(emphasis)),
+      FittedBox(
+        fit: BoxFit.contain,
+        child: Text(
+          this,
+          textAlign: alignment,
+          style: Theme.of(context).textTheme.subtitle1?.copyWith(
+              color: color ??
+                  Theme.of(context)
+                      .colorScheme
+                      .onBackground
+                      .withOpacity(emphasis)),
+        ),
       );
 
-  Text subtitle2(
+  Widget subtitle2(
     BuildContext context, {
     Color? color,
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      Text(
-        this,
-        textAlign: alignment,
-        style: Theme.of(context).textTheme.subtitle2?.copyWith(
-            color: color ??
-                Theme.of(context)
-                    .colorScheme
-                    .onBackground
-                    .withOpacity(emphasis)),
+      FittedBox(
+        fit: BoxFit.contain,
+        child: Text(
+          this,
+          textAlign: alignment,
+          style: Theme.of(context).textTheme.subtitle2?.copyWith(
+              color: color ??
+                  Theme.of(context)
+                      .colorScheme
+                      .onBackground
+                      .withOpacity(emphasis)),
+        ),
       );
 
-  Text caption(
+  Widget caption(
     BuildContext context, {
     Color? color,
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      Text(
-        this,
-        textAlign: alignment,
-        style: Theme.of(context).textTheme.caption?.copyWith(
-            color: color ??
-                Theme.of(context)
-                    .colorScheme
-                    .onBackground
-                    .withOpacity(emphasis)),
+      FittedBox(
+        fit: BoxFit.contain,
+        child: Text(
+          this,
+          textAlign: alignment,
+          style: Theme.of(context).textTheme.caption?.copyWith(
+              color: color ??
+                  Theme.of(context)
+                      .colorScheme
+                      .onBackground
+                      .withOpacity(emphasis)),
+        ),
       );
 
-  Text overline(
+  Widget overline(
     BuildContext context, {
     Color? color,
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      Text(
-        this,
-        textAlign: alignment,
-        style: Theme.of(context).textTheme.overline?.copyWith(
-            color: color ??
-                Theme.of(context)
-                    .colorScheme
-                    .onBackground
-                    .withOpacity(emphasis)),
+      FittedBox(
+        fit: BoxFit.contain,
+        child: Text(
+          this,
+          textAlign: alignment,
+          style: Theme.of(context).textTheme.overline?.copyWith(
+              color: color ??
+                  Theme.of(context)
+                      .colorScheme
+                      .onBackground
+                      .withOpacity(emphasis)),
+        ),
       );
 
-  Widget textButton(BuildContext context, {required Function() onTap}) => Text(
-        this,
-        style: Theme.of(context).textTheme.bodyText2?.copyWith(
-              color: Theme.of(context)
-                  .colorScheme
-                  .onBackground
-                  .withOpacity(kEmphasisMedium),
-            ),
-      ).clickable(onTap: onTap);
+  Widget textButton(BuildContext context, {required Function() onTap}) =>
+      FittedBox(
+        fit: BoxFit.contain,
+        child: Text(
+          this,
+          style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                color: Theme.of(context)
+                    .colorScheme
+                    .onBackground
+                    .withOpacity(kEmphasisMedium),
+              ),
+        ).clickable(onTap: onTap),
+      );
 
   Widget asSvg({
     double? size,

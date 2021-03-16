@@ -17,8 +17,8 @@ class SizeConfig {
   static bool get kIsMobile => kDeviceWidth < 650;
 
   /// tablet view
-  static bool get kIsTablet => kDeviceWidth >= 650 && kDeviceWidth < 1100;
+  static bool get kIsTablet => kDeviceWidth >= 650 && kDeviceWidth < 1080;
 
   /// desktop view
-  static bool get kIsDesktop => kDeviceWidth >= 1100;
+  static bool get kIsDesktop => kDeviceWidth >= 1080;
 }
