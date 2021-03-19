@@ -1,6 +1,6 @@
 name: shared_utils
 description: Shared utilities for personal Flutter projects
-version: 0.0.1-dev.1
+version: 0.0.2-dev.2
 homepage: https://github.com/Quabynah-Codelabs/private-packages/tree/main/shared_utils
 
 environment:
@@ -11,9 +11,10 @@ dependencies:
   flutter:
     sdk: flutter
   cached_network_image: ^3.0.0-nullsafety
+  equatable: ^2.0.0
   feather_icons: ^1.1.0-nullsafety.0
-  fluttericon: ^2.0.0
   flutter_svg: ^0.21.0-nullsafety.0
+  fluttericon: ^2.0.0
   google_fonts: ^2.0.0
 
 dev_dependencies:
@@ -21,5 +22,5 @@ dev_dependencies:
     sdk: flutter
   pedantic: ^1.11.0
 
-flutter:
+flutter: null
 # dart pub publish --dry-run

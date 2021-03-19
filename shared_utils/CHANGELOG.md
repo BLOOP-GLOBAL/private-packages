@@ -1,3 +1,3 @@
-## [0.0.1-dev.1] - March 15, 2021.
+## [0.0.2-dev.2] - March 15, 2021.
 
 - Shared utilities for personal Flutter projects
