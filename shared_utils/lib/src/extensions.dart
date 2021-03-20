@@ -3,6 +3,7 @@ library shared_utils;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shared_utils/shared_utils.dart';
 
 import 'colors.dart';
 import 'spacing.dart';
@@ -402,6 +403,13 @@ extension TextX on String {
 extension ContextX on BuildContext {
   /// navigator state
   NavigatorState get navigator => Navigator.of(this);
+
+  /// screen dimensions
+  ///
+  /// Must have called `SizeConfig().init(context)` already
+  /// in the initial widget (possible splash screen)
+  double get width => SizeConfig.kDeviceWidth;
+  double get height => SizeConfig.kDeviceHeight;
 
   /// shows a [SnackBar]
   void showSnackBar(String message) {

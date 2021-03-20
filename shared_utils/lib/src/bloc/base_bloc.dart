@@ -1,3 +1,5 @@
+library shared_utils;
+
 import 'package:bloc/bloc.dart';
 
 import 'bloc_state.dart';

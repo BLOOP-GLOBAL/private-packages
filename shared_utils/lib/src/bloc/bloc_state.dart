@@ -1,3 +1,5 @@
+library shared_utils;
+
 import 'package:equatable/equatable.dart';
 
 enum _BlocState {
