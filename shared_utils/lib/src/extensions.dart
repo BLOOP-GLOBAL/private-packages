@@ -418,9 +418,11 @@ extension ContextX on BuildContext {
       ..removeCurrentSnackBar()
       ..showSnackBar(
         SnackBar(
-          content: message.bodyText1(
-            this,
-            color: Theme.of(this).colorScheme.onPrimary,
+          content: Text(
+            message,
+            style: Theme.of(this).textTheme.bodyText1?.copyWith(
+                  color: Theme.of(this).colorScheme.onPrimary,
+                ),
           ),
           behavior: SnackBarBehavior.floating,
           action: SnackBarAction(

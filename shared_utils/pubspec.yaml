@@ -25,4 +25,4 @@ dev_dependencies:
   pedantic: ^1.11.0
 
 flutter: null
-# dart pub publish --dry-run
+# flutter pub publish --dry-run
