@@ -136,18 +136,15 @@ extension TextX on String {
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      FittedBox(
-        fit: BoxFit.contain,
-        child: Text(
-          this,
-          textAlign: alignment,
-          style: Theme.of(context).textTheme.headline4?.copyWith(
-              color: color ??
-                  Theme.of(context)
-                      .colorScheme
-                      .onBackground
-                      .withOpacity(emphasis)),
-        ),
+      Text(
+        this,
+        textAlign: alignment,
+        style: Theme.of(context).textTheme.headline4?.copyWith(
+            color: color ??
+                Theme.of(context)
+                    .colorScheme
+                    .onBackground
+                    .withOpacity(emphasis)),
       );
 
   Widget h5(
@@ -156,18 +153,15 @@ extension TextX on String {
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      FittedBox(
-        fit: BoxFit.contain,
-        child: Text(
-          this,
-          textAlign: alignment,
-          style: Theme.of(context).textTheme.headline5?.copyWith(
-              color: color ??
-                  Theme.of(context)
-                      .colorScheme
-                      .onBackground
-                      .withOpacity(emphasis)),
-        ),
+      Text(
+        this,
+        textAlign: alignment,
+        style: Theme.of(context).textTheme.headline5?.copyWith(
+            color: color ??
+                Theme.of(context)
+                    .colorScheme
+                    .onBackground
+                    .withOpacity(emphasis)),
       );
 
   Widget h6(
@@ -176,18 +170,15 @@ extension TextX on String {
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      FittedBox(
-        fit: BoxFit.contain,
-        child: Text(
-          this,
-          textAlign: alignment,
-          style: Theme.of(context).textTheme.headline6?.copyWith(
-              color: color ??
-                  Theme.of(context)
-                      .colorScheme
-                      .onBackground
-                      .withOpacity(emphasis)),
-        ),
+      Text(
+        this,
+        textAlign: alignment,
+        style: Theme.of(context).textTheme.headline6?.copyWith(
+            color: color ??
+                Theme.of(context)
+                    .colorScheme
+                    .onBackground
+                    .withOpacity(emphasis)),
       );
 
   Widget bodyText1(
@@ -196,18 +187,15 @@ extension TextX on String {
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      FittedBox(
-        fit: BoxFit.contain,
-        child: Text(
-          this,
-          textAlign: alignment,
-          style: Theme.of(context).textTheme.bodyText1?.copyWith(
-              color: color ??
-                  Theme.of(context)
-                      .colorScheme
-                      .onBackground
-                      .withOpacity(emphasis)),
-        ),
+      Text(
+        this,
+        textAlign: alignment,
+        style: Theme.of(context).textTheme.bodyText1?.copyWith(
+            color: color ??
+                Theme.of(context)
+                    .colorScheme
+                    .onBackground
+                    .withOpacity(emphasis)),
       );
 
   Widget bodyText2(
@@ -216,18 +204,15 @@ extension TextX on String {
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      FittedBox(
-        fit: BoxFit.contain,
-        child: Text(
-          this,
-          textAlign: alignment,
-          style: Theme.of(context).textTheme.bodyText2?.copyWith(
-              color: color ??
-                  Theme.of(context)
-                      .colorScheme
-                      .onBackground
-                      .withOpacity(emphasis)),
-        ),
+      Text(
+        this,
+        textAlign: alignment,
+        style: Theme.of(context).textTheme.bodyText2?.copyWith(
+            color: color ??
+                Theme.of(context)
+                    .colorScheme
+                    .onBackground
+                    .withOpacity(emphasis)),
       );
 
   Widget subtitle1(
@@ -236,18 +221,15 @@ extension TextX on String {
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      FittedBox(
-        fit: BoxFit.contain,
-        child: Text(
-          this,
-          textAlign: alignment,
-          style: Theme.of(context).textTheme.subtitle1?.copyWith(
-              color: color ??
-                  Theme.of(context)
-                      .colorScheme
-                      .onBackground
-                      .withOpacity(emphasis)),
-        ),
+      Text(
+        this,
+        textAlign: alignment,
+        style: Theme.of(context).textTheme.subtitle1?.copyWith(
+            color: color ??
+                Theme.of(context)
+                    .colorScheme
+                    .onBackground
+                    .withOpacity(emphasis)),
       );
 
   Widget subtitle2(
@@ -256,18 +238,15 @@ extension TextX on String {
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      FittedBox(
-        fit: BoxFit.contain,
-        child: Text(
-          this,
-          textAlign: alignment,
-          style: Theme.of(context).textTheme.subtitle2?.copyWith(
-              color: color ??
-                  Theme.of(context)
-                      .colorScheme
-                      .onBackground
-                      .withOpacity(emphasis)),
-        ),
+      Text(
+        this,
+        textAlign: alignment,
+        style: Theme.of(context).textTheme.subtitle2?.copyWith(
+            color: color ??
+                Theme.of(context)
+                    .colorScheme
+                    .onBackground
+                    .withOpacity(emphasis)),
       );
 
   Widget caption(
@@ -276,18 +255,15 @@ extension TextX on String {
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      FittedBox(
-        fit: BoxFit.contain,
-        child: Text(
-          this,
-          textAlign: alignment,
-          style: Theme.of(context).textTheme.caption?.copyWith(
-              color: color ??
-                  Theme.of(context)
-                      .colorScheme
-                      .onBackground
-                      .withOpacity(emphasis)),
-        ),
+      Text(
+        this,
+        textAlign: alignment,
+        style: Theme.of(context).textTheme.caption?.copyWith(
+            color: color ??
+                Theme.of(context)
+                    .colorScheme
+                    .onBackground
+                    .withOpacity(emphasis)),
       );
 
   Widget overline(
@@ -296,18 +272,15 @@ extension TextX on String {
     double emphasis = kEmphasisHigh,
     TextAlign alignment = TextAlign.start,
   }) =>
-      FittedBox(
-        fit: BoxFit.contain,
-        child: Text(
-          this,
-          textAlign: alignment,
-          style: Theme.of(context).textTheme.overline?.copyWith(
-              color: color ??
-                  Theme.of(context)
-                      .colorScheme
-                      .onBackground
-                      .withOpacity(emphasis)),
-        ),
+      Text(
+        this,
+        textAlign: alignment,
+        style: Theme.of(context).textTheme.overline?.copyWith(
+            color: color ??
+                Theme.of(context)
+                    .colorScheme
+                    .onBackground
+                    .withOpacity(emphasis)),
       );
 
   Widget textButton(BuildContext context, {required Function() onTap}) =>

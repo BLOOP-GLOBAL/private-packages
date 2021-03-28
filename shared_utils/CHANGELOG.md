@@ -1,4 +1,4 @@
-## [0.0.3-dev.3] - March 15, 2021.
+## [0.0.4-dev.4] - March 15, 2021.
 
 - Shared utilities for personal Flutter projects
 
