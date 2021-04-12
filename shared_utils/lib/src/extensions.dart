@@ -10,6 +10,16 @@ import 'spacing.dart';
 
 /// extensions on any [Widget]
 extension WidgetX on Widget {
+  Widget horizontal(double spacing) => Padding(
+        padding: EdgeInsets.symmetric(horizontal: spacing),
+        child: this,
+      );
+
+  Widget vertical(double spacing) => Padding(
+        padding: EdgeInsets.symmetric(vertical: spacing),
+        child: this,
+      );
+
   Widget bottom(double spacing) => Padding(
         padding: EdgeInsets.only(bottom: spacing),
         child: this,
@@ -361,11 +371,14 @@ extension TextX on String {
   Widget avatar({
     required double size,
     bool fromAsset = false,
+    bool circular = false,
     BoxFit fit = BoxFit.cover,
   }) =>
       fromAsset
-          ? asAssetImage(size: size, fit: fit).circularClip(size / 4)
-          : asNetworkImage(size: size, fit: fit).circularClip(size / 4);
+          ? asAssetImage(size: size, fit: fit)
+              .circularClip(circular ? size : size / 4)
+          : asNetworkImage(size: size, fit: fit)
+              .circularClip(circular ? size : size / 4);
 
   String capitalize() => split(' ')
       .map((str) => '${str[0].toUpperCase()}${str.substring(1)}')
