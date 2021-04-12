@@ -139,7 +139,7 @@ extension IconX on Icon {
 /// extensions on any [String]
 ///
 /// converts a [String] to a [Text][Widget]
-extension TextX on String {
+extension TextX on String? {
   Widget h4(
     BuildContext context, {
     Color? color,
@@ -147,7 +147,7 @@ extension TextX on String {
     TextAlign alignment = TextAlign.start,
   }) =>
       Text(
-        this,
+        this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.headline4?.copyWith(
             color: color ??
@@ -164,7 +164,7 @@ extension TextX on String {
     TextAlign alignment = TextAlign.start,
   }) =>
       Text(
-        this,
+        this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.headline5?.copyWith(
             color: color ??
@@ -181,7 +181,7 @@ extension TextX on String {
     TextAlign alignment = TextAlign.start,
   }) =>
       Text(
-        this,
+        this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.headline6?.copyWith(
             color: color ??
@@ -198,7 +198,7 @@ extension TextX on String {
     TextAlign alignment = TextAlign.start,
   }) =>
       Text(
-        this,
+        this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.bodyText1?.copyWith(
             color: color ??
@@ -215,7 +215,7 @@ extension TextX on String {
     TextAlign alignment = TextAlign.start,
   }) =>
       Text(
-        this,
+        this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.bodyText2?.copyWith(
             color: color ??
@@ -232,7 +232,7 @@ extension TextX on String {
     TextAlign alignment = TextAlign.start,
   }) =>
       Text(
-        this,
+        this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.subtitle1?.copyWith(
             color: color ??
@@ -249,7 +249,7 @@ extension TextX on String {
     TextAlign alignment = TextAlign.start,
   }) =>
       Text(
-        this,
+        this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.subtitle2?.copyWith(
             color: color ??
@@ -266,7 +266,7 @@ extension TextX on String {
     TextAlign alignment = TextAlign.start,
   }) =>
       Text(
-        this,
+        this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.caption?.copyWith(
             color: color ??
@@ -283,7 +283,7 @@ extension TextX on String {
     TextAlign alignment = TextAlign.start,
   }) =>
       Text(
-        this,
+        this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.overline?.copyWith(
             color: color ??
@@ -297,7 +297,7 @@ extension TextX on String {
       FittedBox(
         fit: BoxFit.contain,
         child: Text(
-          this,
+          this ?? '',
           style: Theme.of(context).textTheme.bodyText2?.copyWith(
                 color: Theme.of(context)
                     .colorScheme
@@ -316,7 +316,7 @@ extension TextX on String {
     assert(size != null || (height != null && width != null));
 
     return SvgPicture.asset(
-      this,
+      this ?? '',
       height: size ?? height,
       width: size ?? width,
       fit: fit,
@@ -332,7 +332,7 @@ extension TextX on String {
   }) {
     assert(size != null || (height != null && width != null));
     return Image.asset(
-      this,
+      this ?? '',
       height: size ?? height,
       width: size ?? width,
       fit: fit,
@@ -347,7 +347,7 @@ extension TextX on String {
   }) {
     assert(size != null || (height != null && width != null));
     return CachedNetworkImage(
-      imageUrl: this,
+      imageUrl: this ?? '',
       height: size ?? height,
       width: size ?? width,
       fit: fit,
@@ -380,9 +380,12 @@ extension TextX on String {
           : asNetworkImage(size: size, fit: fit)
               .circularClip(circular ? size : size / 4);
 
-  String capitalize() => split(' ')
+  String capitalize() => this!
+      .split(' ')
       .map((str) => '${str[0].toUpperCase()}${str.substring(1)}')
       .join(' ');
+
+  bool isNullOrEmpty() => this == null || this!.isEmpty;
 }
 
 /// extensions on [BuildContext]
