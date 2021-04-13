@@ -150,7 +150,7 @@ extension TextX on String? {
         this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.headline4?.copyWith(
-            color: color ??
+            color: color?.withOpacity(emphasis) ??
                 Theme.of(context)
                     .colorScheme
                     .onBackground
@@ -167,7 +167,7 @@ extension TextX on String? {
         this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.headline5?.copyWith(
-            color: color ??
+            color: color?.withOpacity(emphasis) ??
                 Theme.of(context)
                     .colorScheme
                     .onBackground
@@ -184,7 +184,7 @@ extension TextX on String? {
         this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.headline6?.copyWith(
-            color: color ??
+            color: color?.withOpacity(emphasis) ??
                 Theme.of(context)
                     .colorScheme
                     .onBackground
@@ -201,7 +201,7 @@ extension TextX on String? {
         this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.bodyText1?.copyWith(
-            color: color ??
+            color: color?.withOpacity(emphasis) ??
                 Theme.of(context)
                     .colorScheme
                     .onBackground
@@ -218,7 +218,7 @@ extension TextX on String? {
         this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.bodyText2?.copyWith(
-            color: color ??
+            color: color?.withOpacity(emphasis) ??
                 Theme.of(context)
                     .colorScheme
                     .onBackground
@@ -235,7 +235,7 @@ extension TextX on String? {
         this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.subtitle1?.copyWith(
-            color: color ??
+            color: color?.withOpacity(emphasis) ??
                 Theme.of(context)
                     .colorScheme
                     .onBackground
@@ -252,7 +252,7 @@ extension TextX on String? {
         this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.subtitle2?.copyWith(
-            color: color ??
+            color: color?.withOpacity(emphasis) ??
                 Theme.of(context)
                     .colorScheme
                     .onBackground
@@ -269,7 +269,7 @@ extension TextX on String? {
         this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.caption?.copyWith(
-            color: color ??
+            color: color?.withOpacity(emphasis) ??
                 Theme.of(context)
                     .colorScheme
                     .onBackground
@@ -286,25 +286,27 @@ extension TextX on String? {
         this ?? '',
         textAlign: alignment,
         style: Theme.of(context).textTheme.overline?.copyWith(
-            color: color ??
+            color: color?.withOpacity(emphasis) ??
                 Theme.of(context)
                     .colorScheme
                     .onBackground
                     .withOpacity(emphasis)),
       );
-
-  Widget textButton(BuildContext context, {required Function() onTap}) =>
-      FittedBox(
-        fit: BoxFit.contain,
-        child: Text(
-          this ?? '',
-          style: Theme.of(context).textTheme.bodyText2?.copyWith(
-                color: Theme.of(context)
+  Widget button(
+    BuildContext context, {
+    Color? color,
+    double emphasis = kEmphasisHigh,
+    TextAlign alignment = TextAlign.start,
+  }) =>
+      Text(
+        this ?? '',
+        textAlign: alignment,
+        style: Theme.of(context).textTheme.button?.copyWith(
+            color: color?.withOpacity(emphasis) ??
+                Theme.of(context)
                     .colorScheme
                     .onBackground
-                    .withOpacity(kEmphasisMedium),
-              ),
-        ).clickable(onTap: onTap),
+                    .withOpacity(emphasis)),
       );
 
   Widget asSvg({
@@ -380,10 +382,13 @@ extension TextX on String? {
           : asNetworkImage(size: size, fit: fit)
               .circularClip(circular ? size : size / 4);
 
-  String capitalize() => this!
-      .split(' ')
-      .map((str) => '${str[0].toUpperCase()}${str.substring(1)}')
-      .join(' ');
+  String capitalize() {
+    assert(this != null);
+    return this!
+        .split(' ')
+        .map((str) => '${str[0].toUpperCase()}${str.substring(1)}')
+        .join(' ');
+  }
 
   bool isNullOrEmpty() => this == null || this!.isEmpty;
 }
