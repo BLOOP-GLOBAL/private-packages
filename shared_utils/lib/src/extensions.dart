@@ -7,9 +7,19 @@ import 'package:shared_utils/shared_utils.dart';
 
 import 'colors.dart';
 import 'spacing.dart';
+import 'config.dart';
 
 /// extensions on any [Widget]
 extension WidgetX on Widget {
+  Widget fillMaxHeight() => SizedBox(height: SizeConfig.kDeviceHeight);
+
+  Widget fillMaxWidth() => SizedBox(width: SizeConfig.kDeviceWidth);
+
+  Widget fillMaxSize() => SizedBox(
+        height: SizeConfig.kDeviceHeight,
+        width: SizeConfig.kDeviceWidth,
+      );
+
   Widget horizontal(double spacing) => Padding(
         padding: EdgeInsets.symmetric(horizontal: spacing),
         child: this,

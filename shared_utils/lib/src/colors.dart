@@ -17,6 +17,6 @@ const kLightErrorColor = Color(0xffFF6A6A);
 const kLightDisabledColor = Color(0xffC8CBD9);
 
 /// emphasis
-const kEmphasisHigh = 1.0;
+const kEmphasisHigh = 0.85;
 const kEmphasisMedium = 0.67;
 const kEmphasisLow = 0.38;
