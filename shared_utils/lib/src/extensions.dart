@@ -11,13 +11,15 @@ import 'config.dart';
 
 /// extensions on any [Widget]
 extension WidgetX on Widget {
-  Widget fillMaxHeight() => SizedBox(height: SizeConfig.kDeviceHeight);
+  Widget fillMaxHeight([double ratio = 1.0]) =>
+      SizedBox(height: SizeConfig.kDeviceHeight * ratio);
 
-  Widget fillMaxWidth() => SizedBox(width: SizeConfig.kDeviceWidth);
+  Widget fillMaxWidth([double ratio = 1.0]) =>
+      SizedBox(width: SizeConfig.kDeviceWidth * ratio);
 
-  Widget fillMaxSize() => SizedBox(
-        height: SizeConfig.kDeviceHeight,
-        width: SizeConfig.kDeviceWidth,
+  Widget fillMaxSize([double ratio = 1.0]) => SizedBox(
+        height: SizeConfig.kDeviceHeight * ratio,
+        width: SizeConfig.kDeviceWidth * ratio,
       );
 
   Widget horizontal(double spacing) => Padding(
